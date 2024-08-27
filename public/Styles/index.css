@@ -1,0 +1,317 @@
+body {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 18em;
+}
+
+/* home screen */
+#main-title {
+  text-align: center;
+}
+
+.main-subtitle {
+  text-align: center;
+  margin: 2em;
+}
+
+#user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+}
+
+#start-btn {
+  margin: 2.5em;
+  width: 25%;
+  z-index: 1;
+}
+
+#lvl-title {
+  text-align: center;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+/* flashcard */
+#card,
+#question1,
+.label-picture {
+  position: relative;
+  width: 70%;
+  height: 10em;
+  background-color: #f2f2f2ae;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex-direction: column;
+  font-size: 2.5em;
+  margin-left: 5em;
+}
+
+#question1 {
+  background: none;
+  flex-direction: row;
+  gap: 1rem;
+  box-shadow: none;
+}
+
+.label-picture {
+  flex-direction: row;
+  /* gap: 1rem; */
+}
+
+#labelled-picture{
+    position: static;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://img.freepik.com/free-vector/school-classroom-with-schoolchild-pupils-teachers-vector-flat-illustration-classroom-education-schoolchild-classroom-lesson-classroom_1284-52759.jpg?t=st=1724770624~exp=1724774224~hmac=f756f38e570900a0cc4b89e3e63daf1c3ce253e32b9514ac6a66c470a4b8213e&w=740");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 65em;
+    max-width: 570px;
+}
+
+#question1 input[type="radio"] {
+  transform: scale(1.5);
+}
+
+.vocab-img img {
+  height: 6em;
+  margin-bottom: 1rem;
+}
+
+.spanish {
+  margin-top: 1rem;
+}
+
+#card.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#card.active .card__content {
+  transform: rotateX(0deg);
+  opacity: 100%;
+}
+
+.card__title {
+  margin: 0;
+  color: black;
+  font-size: 50pt;
+  font-weight: bold;
+  text-shadow: 0 0 15px white, 0 0 25px white, 0 0 50px white;
+}
+
+#guide-speech {
+  width: 10%;
+  margin-left: 82%;
+  margin-top: -18rem;
+  /* background-color: white; */
+  padding: 3em;
+  border-radius: 50%;
+}
+
+/* table vocab */
+#vocab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  flex-wrap: nowrap;
+}
+
+.nav-btn {
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  padding: 1.5em;
+  height: 0.5em;
+  margin: 8em;
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table img {
+  height: 5em;
+}
+
+table {
+  margin: 0 auto;
+}
+
+/* label image */
+.labels-to-sort,
+.sorted-labels {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sorted-labels {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.draggable-label {
+  background-color: cyan;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 3rem;
+}
+
+.label-dropzone {
+  background-color: darkblue;
+  min-width: 4rem;
+}
+
+.img-drop {
+    position: absolute;
+    opacity: 50%;
+    background-color: darkblue;
+    width: 10%;
+    max-width: 4rem;
+}
+
+@media screen and (min-width: 1800px) {
+  /* home screen */
+  #main-title {
+    font-size: 4em;
+    text-wrap: wrap;
+  }
+
+  .main-subtitle {
+    font-size: 2.5em;
+    text-wrap: wrap;
+  }
+
+  #user-info {
+    font-size: 2.5em;
+  }
+
+  #name,
+  #age {
+    font-size: 0.8em;
+    border: 0.1em solid lightgray;
+  }
+
+  #start-btn {
+    font-size: 2.5em;
+    margin-bottom: -1rem;
+    margin-top: 1em;
+  }
+
+  /* flashcard */
+  #card {
+    transform: scale(1.3);
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 25rem;
+    height: 13em;
+  }
+
+  .label-picture{
+    transform: scale(1.2);
+    margin-left: 25rem;
+    margin-top: 5%;
+    height: 13em;
+  }
+
+  #card.active {
+    transform: scale(1.3);
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 25rem;
+    height: 13em;
+  }
+
+  #lvl-title {
+    font-size: 4em;
+  }
+
+  .vocab-img img {
+    height: 8em;
+  }
+
+  audio {
+    transform: scale(1.5);
+  }
+
+  .spanish {
+    font-size: 2.5em;
+    margin: -1rem;
+    padding: 2rem;
+  }
+
+  #guide-speech {
+    font-size: 2em;
+    margin-top: -30rem;
+    margin-left: 77%;
+  }
+
+  #question1 {
+    transform: scale(1.2);
+    margin-top: 3em;
+    margin-left: 7em;
+  }
+
+  table {
+    transform: scale(2);
+    margin-top: 10%;
+    font-size: 1.2em;
+    margin-left: 25%;
+  }
+
+  #right {
+    position: relative;
+    left: 20rem;
+  }
+
+  .nav-btn {
+    transform: scale(2);
+  }
+
+  table audio {
+    transform: scale(0.7);
+  }
+}
