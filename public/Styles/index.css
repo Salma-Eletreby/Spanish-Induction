@@ -43,7 +43,8 @@ body {
 /* flashcard */
 #card,
 #question1,
-.label-picture {
+.label-picture,
+.sort-area  {
   position: relative;
   width: 70%;
   height: 10em;
@@ -68,6 +69,14 @@ body {
   box-shadow: none;
 }
 
+.sort-area{
+  background: none;
+  box-shadow: none;
+}
+
+.sorted-labels{
+  border-top: 0.2rem dotted grey;
+}
 .label-picture {
   flex-direction: row;
   /* gap: 1rem; */
@@ -213,6 +222,11 @@ table {
     max-width: 4rem;
 }
 
+span{
+  color: red;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 1800px) {
   /* home screen */
   #main-title {
@@ -299,7 +313,7 @@ table {
     transform: scale(2);
     margin-top: 10%;
     font-size: 1.2em;
-    margin-left: 25%;
+    margin-left: 40%;
   }
 
   #right {
@@ -313,5 +327,20 @@ table {
 
   table audio {
     transform: scale(0.7);
+  }
+
+  .sort-area {
+    font-size: 4em;
+    gap:5rem
+  }
+
+  .sorted-labels{
+    padding-top: 1rem;
+  }
+
+  #end{
+    text-align: center;
+    font-size: 10rem;
+    margin-left: 25%;
   }
 }
