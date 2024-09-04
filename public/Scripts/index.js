@@ -41,6 +41,9 @@ window.onDrop = function (event) {
     draggableElement.style.backgroundColor = "rgb(253, 255, 210)";
     draggableElement.style.color = "black";
     draggableElement.style.fontSize = "1rem";
+    Array.from(document.getElementsByClassName("sort-label")).forEach((d) => {
+      d.style.fontSize = "1em";
+    });
     dropzone.style.opacity = "100%";
   } else {
     alert("This drop zone can only have one label.");
@@ -160,8 +163,8 @@ async function render() {
             </td>
         </tr>
         <tr>
-            <td><img src="https://img.freepik.com/free-vector/hand-drawn-black-teacher-clipart-illustration_23-2150923186.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="teacher"></td>
-            <td>Profesor(a)</td>
+            <td><img src="https://img.freepik.com/free-vector/woman-teacher-classroom_24877-50507.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="teacher"></td>
+            <td>Profesora</td>
             <td>Teacher</td>
             <td>
                 <audio controls>
@@ -277,10 +280,10 @@ async function render() {
                     </div>
                 </div>
                 <div id="labelled-picture">
-                    <div id="zone-0" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 800px; top: 200px;color:white">0</div>
-                    <div id="zone-1" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 880px; top: 320px;color:white">1</div>
-                    <div id="zone-2" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 720px; top: 150px;color:white">2</div>
-                    <div id="zone-3" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 650px; top: 80px;color:white">3</div>
+                    <div id="zone-0" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 550px; top: 200px;color:white">0</div>
+                    <div id="zone-1" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 800px; top: 400px;color:white">1</div>
+                    <div id="zone-2" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 690px; top: 350px;color:white">2</div>
+                    <div id="zone-3" class="label-dropzone img-drop" ondragover="onDragOver(event);" ondrop="onDrop(event);"  style="left: 750px; top: 150px;color:white">3</div>
                 </div>
             </div>
     `;
@@ -329,7 +332,7 @@ async function render() {
                     <div class="vocab-img">
                         <img src="https://img.freepik.com/free-vector/school-daily-life-cartoon-illustration_1284-26474.jpg?t=st=1724770614~exp=1724774214~hmac=04714c71d8b9176cf72f4c2b6130f40ee74c11106730aa8ff23737c8aa5ec84b&w=740" alt="Classroom">
                     </div>
-                    <p class="card__title" style="font-size:1em; text-align:center;"><span>What is</span>the main idea of today's lesson?
+                    <p class="card__title" style="font-size:1em; text-align:center;"><span>What is</span> the main idea of today's lesson?
                     </p>
                 </div>
         </div>
@@ -341,8 +344,8 @@ async function render() {
     document.getElementById("start-btn").innerHTML = "Next";
     document.getElementById("body").style.gap = "11em";
     document.getElementById("main").style.width = "90%";
-    
-    document.getElementById("guide").style.display="none"
+
+    document.getElementById("guide").style.display = "none";
 
     document.getElementById("main-section").innerHTML = `
     <h1 id="lvl-title">Level 3</h1>
@@ -365,17 +368,6 @@ async function render() {
         </audio>
       </td>
     </tr>
-    <tr>
-      <td><img src="https://img.freepik.com/free-photo/hesitant-male-hipsters-scratch-heads-with-clueless-expressions-cant-make-decision-when-start-working-project-work_273609-17602.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="blackboard" /></td>
-      <td>¿<span>Puedes repetir</span> lo que dije?</td>
-      <td><span>Can you repeat</span> what I said?</td>
-      <td>
-        <audio controls>
-          <source src="https://www.dropbox.com/scl/fi/mvlzeuzbseoeni8f1tf6m/sentence2.mp3?rlkey=l4rq8ltur6jveyof8eavsvgzm&st=53qa4yxv&dl=1" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </td>
-    </tr>
   </table>
   <div></div>
 </div>
@@ -388,7 +380,7 @@ async function render() {
     function handleScreenSizeChange(event) {
       if (event.matches) {
         document.getElementById("body").style.gap = "0em";
-        document.getElementById("vocab-table").style.marginLeft="31.5%"
+        document.getElementById("vocab-table").style.marginLeft = "31.5%";
       }
     }
 
@@ -410,34 +402,12 @@ async function render() {
       <th>Pronouncation</th>
     </tr>
     <tr>
-      <td><img src="https://img.freepik.com/free-vector/trigonometry-flyer-template_1284-10156.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="book" /></td>
-      <td><span>Quisiera</span> un libro de matemáticas <span>por favor</span></td>
-      <td><span>I would like</span> a math book, <span>please</span>.</td>
+      <td><img src="https://img.freepik.com/free-photo/hesitant-male-hipsters-scratch-heads-with-clueless-expressions-cant-make-decision-when-start-working-project-work_273609-17602.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="blackboard" /></td>
+      <td>¿<span>Puedes repetir</span> lo que dije?</td>
+      <td><span>Can you repeat</span> what I said?</td>
       <td>
         <audio controls>
-          <source src="https://www.dropbox.com/scl/fi/9azlyugbenl5blhz786x2/sentence3.mp3?rlkey=spoeo6l44id18ul1yyu4ou02e&st=hk5zge71&dl=1" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://img.freepik.com/free-photo/young-student-looking-book-library_23-2149215403.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="blackboard" /></td>
-      <td>¿<span>Cómo llego</span> a la biblioteca, <span>por favor</span>?</td>
-      <td><span>How do I get to</span the library, <span>please</span>? </td>
-      <td>
-        <audio controls>
-          <source src="https://www.dropbox.com/scl/fi/j2v7cy6ore10z54tm2hvq/sentence4.mp3?rlkey=kddk7zfkc0096niu9ja0s6wpz&st=9r1bj1tw&dl=1" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </td>
-    </tr>
-        <tr>
-      <td><img src="https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148920666.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="blackboard" /></td>
-      <td>¿<span>Tienes alguna</span> pregunta sobre el tema?</td>
-      <td><span>Do you have any</span> questions about the topic? </td>
-      <td>
-        <audio controls>
-          <source src="https://www.dropbox.com/scl/fi/pkm1d81sli07zy6fc844h/sentence5.mp3?rlkey=r83ox6tsm6epjwpne9elmtdr6&st=577qmbhb&dl=1" type="audio/mpeg" />
+          <source src="https://www.dropbox.com/scl/fi/mvlzeuzbseoeni8f1tf6m/sentence2.mp3?rlkey=l4rq8ltur6jveyof8eavsvgzm&st=53qa4yxv&dl=1" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </td>
@@ -445,7 +415,6 @@ async function render() {
   </table>
   <div></div>
 </div>
-
     `;
     state.confirmation = !state.confirmation;
 
@@ -454,9 +423,7 @@ async function render() {
     function handleScreenSizeChange(event) {
       if (event.matches) {
         document.getElementById("body").style.gap = "0em";
-        document.getElementById("vocab-table").style.marginLeft="25%"
-        document.getElementById("vocab-table").style.transform="scale(1.5"
-
+        document.getElementById("vocab-table").style.marginLeft = "32%";
       }
     }
 
@@ -464,17 +431,17 @@ async function render() {
   } else if (state.lvlIndex == 9) {
     document.getElementById("start-btn").innerHTML = "Next";
     var areaHTML = `
-<h1 id="lvl-title">Please sort the colored words in each of the following sentences to form the correct order</h1>
+    <h1 id="lvl-title">Please sort the colored words in each of the following sentences to form the correct order</h1>
 <div class="sort-area">
   <div class="labels-to-sort">
     <div id="word-0" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">
       <div id="draggable-0" class="draggable-label" ondragstart="onDragStart(event);" draggable="false" style="position: relative; background-color: rgba(0, 0, 0, 0)">¿</div>
     </div>
     <div id="word-1" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: #b5cfb7">
-      <div id="draggable-1" class="draggable-label" draggable="true" style="position: relative" ondragstart="onDragStart(event);">darme</div>
+      <div id="draggable-1" class="draggable-label sort-label" draggable="true" style="position: relative" ondragstart="onDragStart(event);">darme</div>
     </div>
     <div id="word-2" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: #b5cfb7">
-      <div id="draggable-2" class="draggable-label" draggable="true" style="position: relative" ondragstart="onDragStart(event);">puedes</div>
+      <div id="draggable-2" class="draggable-label sort-label" draggable="true" style="position: relative" ondragstart="onDragStart(event);">puedes</div>
     </div>
     <div id="word-3" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">
       <div id="draggable-3" class="draggable-label" ondragstart="onDragStart(event);" draggable="false" style="position: relative; background-color: rgba(0, 0, 0, 0)">un</div>
@@ -486,32 +453,32 @@ async function render() {
       <div id="draggable-5" class="draggable-label" ondragstart="onDragStart(event);" draggable="false" style="position: relative; background-color: rgba(0, 0, 0, 0)">?</div>
     </div>
   </div>
-  <div class="sorted-labels"><div id="zone-0" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">¿</div>
-  <div id="zone-1" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
-  <div id="zone-2" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
-  <div id="zone-3" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">un</div>
-  <div id="zone-4" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">ejemplo</div>
-  <div id="zone-5" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0)">?</div></div>
-  <div id="sentence">
+  <div class="sorted-labels">
+    <div id="zone-0" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0);margin-top: 1rem;">¿</div>
+    <div id="zone-1" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
+    <div id="zone-2" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);"></div>
+    <div id="zone-3" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0);margin-top: 1rem;">un</div>
+    <div id="zone-4" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0);margin-top: 1rem;">ejemplo</div>
+    <div id="zone-5" class="label-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="background-color: rgba(0, 0, 0, 0);margin-top: 1rem;">?</div>
+  </div>
+  <div id="sentence"></div>
 </div>
-</div>
-            `;
+    `;
     document.getElementById("main-section").innerHTML = areaHTML;
 
     state.checkAnswer = true;
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
-        document.getElementById("lvl-title").style.marginLeft="10rem"
-        document.getElementById("vocab-table").style.transform="scale(1.5"
-
+        document.getElementById("lvl-title").style.marginLeft = "10rem";
+        document.getElementById("vocab-table").style.transform = "scale(1.5)";
       }
     }
 
     handleScreenSizeChange(mediaQuery);
-  } else if(state.lvlIndex == 10){
+  } else if (state.lvlIndex == 10) {
     document.getElementById("main-section").innerHTML = `<h1 id="end">-End-</h1>`;
-    document.getElementById("start-btn").style.display="none"
+    document.getElementById("start-btn").style.display = "none";
     let user = {
       userName: state.name,
       age: state.age,
@@ -526,7 +493,6 @@ async function render() {
       body: JSON.stringify(user),
     });
   }
-
 }
 
 function checkAnswer() {
@@ -597,7 +563,7 @@ function checkAnswer() {
         }
       });
     }
-  } else if(state.lvlIndex == 9){
+  } else if (state.lvlIndex == 9) {
     var unanswered = false;
     var unansweredSort = [];
 
@@ -624,7 +590,7 @@ function checkAnswer() {
         q.style.border = "0.1em solid red";
       });
     } else {
-      var answer = ["¿","Puedes", "darme", "un", "ejemplo" ,"?"]
+      var answer = ["¿", "Puedes", "darme", "un", "ejemplo", "?"];
 
       answer.forEach((a, i) => {
         if (a.ignore == false) {
@@ -647,14 +613,13 @@ function checkAnswer() {
       document.getElementById("sentence").style.borderRadius = "10px";
       document.getElementById("sentence").style.textShadow = "0 0 15px white, 0 0 25px white, 0 0 50px white";
       document.getElementById("sentence").style.fontSize = "2rem";
-  }
+    }
   }
 }
 
 document.getElementById("start-btn").onclick = () => {
   if (state.confirmation == true) {
     document.getElementById("start-btn").innerHTML = "If you go to next word, You cannot go back. Click again to confirm.";
-    document.getElementById("start-btn").style.width = "60%";
     state.confirmation = !state.confirmation;
   } else if (state.checkAnswer == true) {
     checkAnswer();
