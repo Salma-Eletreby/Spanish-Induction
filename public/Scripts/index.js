@@ -82,7 +82,7 @@ async function render() {
                     <img src="https://img.freepik.com/free-photo/view-modern-classroom-school_23-2150911443.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="Classroom">
                 </div>
                 <audio controls>
-                    <source src="https://www.dropbox.com/scl/fi/cba191jmz86ysmaw7ebjr/classroom.mp3?rlkey=qr2mbhc3p8d2g7j1iifp9a7h0&st=bk15h2xb&dl=1" type="audio/mpeg">
+                    <source src="https://www.dropbox.com/scl/fi/6gpeffl0hri5tm0fr9k58/Aula.mp4?rlkey=3i0hed84wgebgfkusnhodcz8j&st=mvm9dsv8&dl=1" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <p class="spanish">Aula</p>
@@ -157,7 +157,7 @@ async function render() {
             <td>School</td>
             <td>
                 <audio controls>
-                    <source src="https://www.dropbox.com/scl/fi/y5ak4lku8wwrna7elvfim/school.mp3?rlkey=4xs56n08bzopp5dal8qyoop2r&st=749gdq3n&dl=1" type="audio/mpeg">
+                    <source src="https://www.dropbox.com/scl/fi/er2atw1ja5f20ck96kuii/Scuela.mp4?rlkey=0z2bd6ph1d1wv46ncvtja7ohz&st=o5an6cpz&dl=1" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </td>
@@ -168,7 +168,7 @@ async function render() {
             <td>Teacher</td>
             <td>
                 <audio controls>
-                    <source src="https://www.dropbox.com/scl/fi/d4katqd0ua3dxjsbo4jfo/teacher.mp3?rlkey=pjrdzxsfnu8o1gih6cmwvv7v9&st=pppptl67&dl=1" type="audio/mpeg">
+                    <source src="https://www.dropbox.com/scl/fi/hjejfr8qqi4ahg5drczg1/Profesora.mp4?rlkey=1e10mqlr3cktn54d9nqk4z8vs&st=p87zuf6m&dl=1" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </td>
