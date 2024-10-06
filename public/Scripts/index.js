@@ -53,6 +53,8 @@ window.onDrop = function (event) {
 };
 
 async function render() {
+  savetoLocalStorage();
+
   if (state.lvlIndex == 1) {
     document.getElementById("body").style.gap = "0em";
     document.getElementById("guide-avatar").style.width = "10%";
@@ -97,6 +99,18 @@ async function render() {
 
     state.confirmation = !state.confirmation;
   } else if (state.lvlIndex == 2) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+
     document.getElementById("guide-avatar").style.width = "0%";
     document.getElementById("guide-avatar").style.marginLeft = "0%";
 
@@ -136,6 +150,28 @@ async function render() {
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 3) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+    
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
     document.getElementById("body").style.gap = "0em";
     document.getElementById("start-btn").innerHTML = "Next";
     document.getElementById("body").style.gap = "11em";
@@ -193,12 +229,40 @@ async function render() {
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
         document.getElementById("body").style.gap = "0em";
       }
     }
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 4) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+    
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
     document.getElementById("body").style.gap = "0em";
     document.getElementById("start-btn").innerHTML = "Next";
     document.getElementById("body").style.gap = "11em";
@@ -228,7 +292,7 @@ async function render() {
     <tr>
       <td><img src="https://img.freepik.com/free-photo/school-blackboard_1048-4547.jpg?ga=GA1.1.1425892491.1713816127&semt=ais_hybrid" alt="blackboard" /></td>
       <td>Pizarra</td>
-      <td>School</td>
+      <td>Blackboard</td>
       <td>
         <audio controls>
           <source src="https://www.dropbox.com/scl/fi/ruvia2lk6gd3pl8yo1yu2/blackboard.mp3?rlkey=jcabwy34c7ne287f94v0ie11i&st=2ak13ujg&dl=1" type="audio/mpeg" />
@@ -247,12 +311,45 @@ async function render() {
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
         document.getElementById("body").style.gap = "0em";
       }
     }
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 5) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+    
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
     document.getElementById("guide-avatar").style.width = "0%";
     document.getElementById("guide-avatar").style.marginLeft = "0%";
 
@@ -288,8 +385,61 @@ async function render() {
             </div>
     `;
 
+    const mediaQuery = window.matchMedia("(min-width: 1800px)");
+
+    function handleScreenSizeChange(event) {
+      if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
+        document.getElementById("body").style.gap = "0em";
+      }
+    }
+
+    handleScreenSizeChange(mediaQuery);
+
     state.checkAnswer = true;
   } else if (state.lvlIndex == 6) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+    
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
     document.getElementById("body").style.gap = "0em";
     document.getElementById("guide-avatar").style.width = "10%";
     document.getElementById("guide-avatar").style.marginLeft = "80%";
@@ -339,7 +489,78 @@ async function render() {
         `;
 
     state.confirmation = !state.confirmation;
+    const mediaQuery = window.matchMedia("(min-width: 1800px)");
+
+    function handleScreenSizeChange(event) {
+      if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
+        document.getElementById("body").style.gap = "0em";
+      }
+    }
+
+    handleScreenSizeChange(mediaQuery);
+
   } else if (state.lvlIndex == 7) {
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+    
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+document.getElementById("guide-speech").style.backgroundColor = "white";
+    document.getElementById("guide-speech").style.marginBottom = "-1rem";
+    document.getElementById("guide-speech").style.marginLeft = "40em";
+    document.getElementById("guide-speech").style.padding = "3rem";
+
+    document.getElementById("guide").style.marginTop = " -30rem";
+    document.getElementById("guide").style.marginLeft = "5rem;";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+
     document.getElementById("body").style.gap = "0em";
     document.getElementById("start-btn").innerHTML = "Next";
     document.getElementById("body").style.gap = "11em";
@@ -379,6 +600,7 @@ async function render() {
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
         document.getElementById("body").style.gap = "0em";
         document.getElementById("vocab-table").style.marginLeft = "31.5%";
       }
@@ -386,6 +608,41 @@ async function render() {
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 8) {
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+    document.getElementById("guide-speech").style.marginBottom = "-1rem";
+    document.getElementById("guide-speech").style.marginLeft = "40em";
+    document.getElementById("guide-speech").style.padding = "3rem";
+
+    document.getElementById("guide").style.marginTop = " -30rem";
+    document.getElementById("guide").style.marginLeft = "5rem;";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("guide").style.display = "none";
+
     document.getElementById("body").style.gap = "0em";
     document.getElementById("start-btn").innerHTML = "Next";
     document.getElementById("body").style.gap = "11em";
@@ -422,6 +679,9 @@ async function render() {
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
+        document.getElementById("body").style.gap = "0em";
+        document.getElementById("vocab-table").style.marginLeft = "31.5%";
         document.getElementById("body").style.gap = "0em";
         document.getElementById("vocab-table").style.marginLeft = "32%";
       }
@@ -429,6 +689,46 @@ async function render() {
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 9) {
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+    document.getElementById("guide-speech").style.marginBottom = "-1rem";
+    document.getElementById("guide-speech").style.marginLeft = "40em";
+    document.getElementById("guide-speech").style.padding = "3rem";
+
+    document.getElementById("guide").style.marginTop = " -30rem";
+    document.getElementById("guide").style.marginLeft = "5rem;";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("guide").style.display = "none";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
     document.getElementById("start-btn").innerHTML = "Next";
     var areaHTML = `
     <h1 id="lvl-title">Please sort the colored words in each of the following sentences to form the correct order</h1>
@@ -470,6 +770,11 @@ async function render() {
 
     function handleScreenSizeChange(event) {
       if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
+        document.getElementById("body").style.gap = "0em";
+        document.getElementById("vocab-table").style.marginLeft = "31.5%";
+        document.getElementById("body").style.gap = "0em";
+        document.getElementById("vocab-table").style.marginLeft = "32%";
         document.getElementById("lvl-title").style.marginLeft = "10rem";
         document.getElementById("vocab-table").style.transform = "scale(1.5)";
       }
@@ -477,6 +782,48 @@ async function render() {
 
     handleScreenSizeChange(mediaQuery);
   } else if (state.lvlIndex == 10) {
+    document.getElementById("guide-avatar").style.width = "0%";
+    document.getElementById("guide-avatar").style.marginLeft = "0%";
+
+    document.getElementById("body").style.gap = "7em";
+    document.getElementById("guide-speech").innerHTML = ``;
+    document.getElementById("guide-speech").style.background = "none";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.width = "25%;";
+    
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("guide-avatar").style.width = "10%";
+    document.getElementById("guide-avatar").style.marginLeft = "80%";
+    document.getElementById("guide-speech").style.backgroundColor = "white";
+    document.getElementById("guide-speech").style.marginBottom = "-1rem";
+    document.getElementById("guide-speech").style.marginLeft = "40em";
+    document.getElementById("guide-speech").style.padding = "3rem";
+
+    document.getElementById("guide").style.marginTop = " -30rem";
+    document.getElementById("guide").style.marginLeft = "5rem;";
+
+    document.getElementById("main-section").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("start-btn").style.margin = "1rem";
+    document.getElementById("start-btn").style.position = "absolute";
+    document.getElementById("start-btn").style.bottom = "1rem";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("guide").style.display = "none";
+
+    document.getElementById("body").style.gap = "0em";
+    document.getElementById("start-btn").innerHTML = "Next";
+    document.getElementById("body").style.gap = "11em";
+    document.getElementById("main").style.width = "90%";
+
+    document.getElementById("start-btn").innerHTML = "Next";
+
     document.getElementById("main-section").innerHTML = `<h1 id="end">-End-</h1>`;
     document.getElementById("start-btn").style.display = "none";
     let user = {
@@ -492,6 +839,22 @@ async function render() {
       },
       body: JSON.stringify(user),
     });
+
+    removeFromLocalStorage()
+
+    function handleScreenSizeChange(event) {
+      if (event.matches) {
+        document.getElementById("body").style.gap = "20em";
+        document.getElementById("body").style.gap = "0em";
+        document.getElementById("vocab-table").style.marginLeft = "31.5%";
+        document.getElementById("body").style.gap = "0em";
+        document.getElementById("vocab-table").style.marginLeft = "32%";
+        document.getElementById("lvl-title").style.marginLeft = "10rem";
+        document.getElementById("vocab-table").style.transform = "scale(1.5)";
+      }
+    }
+
+    handleScreenSizeChange(mediaQuery);
   }
 }
 
@@ -636,16 +999,36 @@ document.getElementById("start-btn").onclick = () => {
       document.getElementById("age").style.border = "0.2rem solid red";
     }
     if (userName != "" && userAge != "") {
-      let newState = {
-        lvlIndex: ++state.lvlIndex,
-        checkAnswer: state.checkAnswer,
-        confirmation: state.confirmation,
-        name: userName,
-        age: userAge,
-        score: state.score,
-      };
+      let userData = JSON.parse(localStorage.getItem("userDataInduction")) || [];
+      var isExist = userData.findIndex((d) => d.id === String(userName));
 
-      setState(newState);
+      if (isExist !== -1) {
+        if (userData[isExist].state != state) {
+          setState(userData[isExist].state);
+        } else {
+          let newState = {
+            lvlIndex: ++state.lvlIndex,
+            checkAnswer: state.checkAnswer,
+            confirmation: state.confirmation,
+            name: userName,
+            age: userAge,
+            score: state.score,
+          };
+
+          setState(newState);
+        }
+      } else {
+        let newState = {
+          lvlIndex: ++state.lvlIndex,
+          checkAnswer: state.checkAnswer,
+          confirmation: state.confirmation,
+          name: userName,
+          age: userAge,
+          score: state.score,
+        };
+
+        setState(newState);
+      }
     } else {
       alert("Missing information! Please make sure you filled the name and age");
     }
@@ -660,5 +1043,41 @@ document.getElementById("start-btn").onclick = () => {
     };
 
     setState(newState);
+  }
+};
+
+window.savetoLocalStorage = function () {
+  if (state.name != "") {
+    let data = JSON.parse(localStorage.getItem("userDataInduction")) || [];
+
+    var isExist = data.findIndex((d) => d.id == state.name);
+
+    if (isExist !== -1) {
+      data[isExist] = {
+        id: state.name,
+        state: state,
+      };
+    } else {
+      data.push({
+        id: state.name,
+        state: state,
+      });
+    }
+
+    localStorage.setItem("userDataInduction", JSON.stringify(data));
+  }
+};
+
+window.removeFromLocalStorage = function () {
+  if (state.name != "") {
+    let data = JSON.parse(localStorage.getItem("userDataInduction")) || [];
+
+    var isExist = data.findIndex((d) => d.id == state.name);
+
+    if (isExist !== -1) {
+      data.splice(isExist, 1);
+    }
+
+    localStorage.setItem("userDataInduction", JSON.stringify(data));
   }
 };
